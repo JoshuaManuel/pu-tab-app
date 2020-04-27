@@ -23,6 +23,7 @@ namespace ui { // All below code is in this namespace
 
         this->secondItem = MenuItem::New("Second item");
         this->secondItem->SetColor(COLOR("#FFFFFFFF"));
+        this->secondItem->SetIcon("romfs:/icons/light/web.png"); // use icon
 
         this->thirdItem = MenuItem::New("Select this to exit"); //not setting this color
 

@@ -42,7 +42,7 @@ SOURCES		:=	source source/ui
 DATA		:=	Bin
 INCLUDES	:=	Include
 EXEFS_SRC	:=	exefs_src
-# ROMFS		:=	RomFs
+ROMFS		:=	RomFs
 
 #---------------------------------------------------------------------------------
 # options for code generation
