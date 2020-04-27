@@ -1,6 +1,7 @@
 #include <switch.h>
 #include "ui/mainPage.hpp"
-#include "ui/MainApplication.hpp" // Needed to reference externMainApplication
+#include "ui/MainApplication.hpp"
+#include "ui/imagePage.hpp"
 
 #define COLOR(hex) pu::ui::Color::FromHex(hex)
 
@@ -11,14 +12,13 @@ namespace ui { // All below code is in this namespace
 
     // Add new elements to main page
     MainPage::MainPage() : Layout::Layout() {
-        printf("hello");
-        this->SetBackgroundColor(COLOR("#670000FF"));
+        this->SetBackgroundColor(COLOR("#38A495"));
 
         this->optionMenu = Menu::New(0, 95, 1280, COLOR("#67000000"), 94, 6);
         this->optionMenu->SetOnFocusColor(COLOR("#00000033"));
         this->optionMenu->SetScrollbarColor(COLOR("#170909FF"));
 
-        this->firstItem = MenuItem::New("First item: Press + to quit");
+        this->firstItem = MenuItem::New("First Item: Image");
         this->firstItem->SetColor(COLOR("#FFFFFFFF"));
 
         this->secondItem = MenuItem::New("Second item");
@@ -26,6 +26,8 @@ namespace ui { // All below code is in this namespace
         this->secondItem->SetIcon("romfs:/icons/light/web.png"); // use icon
 
         this->thirdItem = MenuItem::New("Select this to exit"); //not setting this color
+        this->thirdItem->SetColor(COLOR("#FFFFFFFF"));
+
 
         this->optionMenu->AddItem(this->firstItem);
         this->optionMenu->AddItem(this->secondItem);
@@ -36,7 +38,7 @@ namespace ui { // All below code is in this namespace
 
     // Create functions to call when menuItem pressed
     void MainPage::firstMenuItemClick() {
-        printf("Clicked first menuItem\n");
+        mainApp->LoadLayout(mainApp->imagePage);
     }
 
     void MainPage::secondMenuItemClick() {

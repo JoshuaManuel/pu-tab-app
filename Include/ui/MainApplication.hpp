@@ -6,6 +6,7 @@
 
 //Include each page's header file here
 #include "ui/mainPage.hpp"
+#include "ui/imagePage.hpp"
 
 namespace ui {
     class MainApplication : public pu::ui::Application {
@@ -14,6 +15,8 @@ namespace ui {
             PU_SMART_CTOR(MainApplication)
             void OnLoad() override;
 
+            //Update new pages here
             MainPage::Ref mainPage;
+            ImagePage::Ref imagePage;
     };
 }

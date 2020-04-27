@@ -6,8 +6,9 @@ namespace ui {
     void MainApplication::OnLoad() {
         mainApp = this;
 
-        //Create new instances of each used page
+        //Create new instances of each used page. Add them here
         this->mainPage = MainPage::New();
+        this->imagePage = ImagePage::New();
 
         /*
         Bind the onInput functions of each page.

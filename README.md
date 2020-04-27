@@ -3,5 +3,5 @@ This is a plutonium (pu) template under active development for a tab app, probab
 TODO:
 - [ ] Display new pages on ListItem select
 - [ ] Strings file support (check Goldleaf/romfs/strings!)
-- [ ] Add icons
+- [x] Add icons
 - [ ] Color scheme support
