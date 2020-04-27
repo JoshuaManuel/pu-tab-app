@@ -1,24 +1,23 @@
 #include "ui/MainApplication.hpp"
-
-/*
+#include <switch.h>
 
 // If you would like to initialize and finalize stuff before or after Plutonium, you can use libnx's userAppInit/userAppExit
 
 extern "C" void userAppInit()
 {
-    // Initialize stuff
+    socketInitializeDefault(); // initialize sockets for libcurl
+    nxlinkStdio(); // reroute print statements to nxlink
 }
 
 extern "C" void userAppExit()
 {
-    // Cleanup/finalize stuff
+    socketExit();
 }
-
-*/
 
 // Main entrypoint
 int main()
 {
+    printf("printing to nxlink. Bug: Output from mainPage shows up after exiting nxlink\n");
     // First create our renderer, where one can customize SDL or other stuff's initialization.
     auto renderer = pu::ui::render::Renderer::New(pu::ui::render::RendererInitOptions(SDL_INIT_EVERYTHING, pu::ui::render::RendererHardwareFlags).WithIMG(pu::ui::render::IMGAllFlags).WithMixer(pu::ui::render::MixerAllFlags).WithTTF());
 

@@ -3,7 +3,9 @@
 
 // Include Plutonium's main header
 #include <pu/Plutonium>
-#include "ui/MainPage.hpp"
+
+//Include each page's header file here
+#include "ui/mainPage.hpp"
 
 namespace ui {
     class MainApplication : public pu::ui::Application {
