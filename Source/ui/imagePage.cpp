@@ -17,4 +17,20 @@ namespace ui {
         //Add items
         this->Add(this->fafsa);
     }
+
+    //Handle input
+    void ImagePage::onInput(u64 Down, u64 Up, u64 Held, pu::ui::Touch Pos) {
+
+        //Exit if needed
+        if (((Down & KEY_PLUS) || (Down & KEY_MINUS)) && mainApp->IsShown()) {
+            mainApp->CloseWithFadeOut();
+        }
+
+        //Handle menu input
+
+        //Go back
+        if (Down & KEY_B) {
+            mainApp->LoadLayout(mainApp->mainPage);
+        }
+    }
 }
