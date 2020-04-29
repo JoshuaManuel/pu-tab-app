@@ -20,6 +20,7 @@ namespace ui { // All below code is in this namespace
 
         this->firstItem = MenuItem::New("First Item: Image");
         this->firstItem->SetColor(COLOR("#FFFFFFFF"));
+        this->firstItem->SetIcon("romfs:/icons/light/information-variant.png");
 
         this->secondItem = MenuItem::New("Second item");
         this->secondItem->SetColor(COLOR("#FFFFFFFF"));
@@ -27,6 +28,7 @@ namespace ui { // All below code is in this namespace
 
         this->thirdItem = MenuItem::New("Select this to exit"); //not setting this color
         this->thirdItem->SetColor(COLOR("#FFFFFFFF"));
+        this->thirdItem->SetIcon("romfs:/icons/light/update.png");
 
 
         this->optionMenu->AddItem(this->firstItem);
