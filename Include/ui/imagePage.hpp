@@ -12,5 +12,6 @@ namespace ui {
         void onInput(u64 Down, u64 Up, u64 Held, pu::ui::Touch Pos);
     private:
         Image::Ref fafsa;
+        TextBlock::Ref buttonsText;
     };
 }
