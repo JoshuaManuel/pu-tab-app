@@ -7,7 +7,7 @@
 
 using namespace pu::ui::elm;
 
-std::string buttons = "A:\ue0e0  B:\ue0e1  X:\ue0e2  Y:\ue0e3   L:\ue0e4  R:\ue0e5  ZL:\ue0e6  ZR:\ue0e7 SL:\ue0e8  SR:\ue0e9  D-pad:\ue0ea  D-UP:\ue0ebD-DOWN:\ue0ec  D-LEFT:\ue0ed  D-RIGHT:\ue0ee  PLUS-CIRCLE:\ue0efMINUS-CIRCLE:\ue0f0  PLUS:\ue0f1  MINUS:\ue0f2   POWER:\ue0f3  HOME:\ue0f4   SCREENSHOT:\ue0f5   :\ue0df   :\ue0de   :\ue0dd   :\ue0dc";
+std::string buttons = "A:\ue0e0  B:\ue0e1  X:\ue0e2  Y:\ue0e3   L:\ue0e4  R:\ue0e5  ZL:\ue0e6  ZR:\ue0e7 SL:\ue0e8  SR:\ue0e9  D-pad:\ue0ea  D-UP:\ue0ebD-DOWN:\ue0ec  D-LEFT:\ue0ed  D-RIGHT:\ue0ee  PLUS-CIRCLE:\ue0efMINUS-CIRCLE:\ue0f0  PLUS:\ue0f1  MINUS:\ue0f2   POWER:\ue0f3  HOME:\ue0f4   SCREENSHOT:\ue0f5";
 
 
 namespace ui {
