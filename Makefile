@@ -42,7 +42,7 @@ SOURCES		:=	source source/ui source/util source/cfg
 DATA		:=	Bin
 INCLUDES	:=	Include
 EXEFS_SRC	:=	exefs_src
-ROMFS		:=	RomFs
+ROMFS		:=	romfs
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -54,7 +54,7 @@ CFLAGS	:=	-g -O2 -ffunction-sections \
 
 CFLAGS	+=	$(INCLUDE) -D__SWITCH__
 
-CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++17
+CXXFLAGS	:= $(CFLAGS) -fno-rtti  -std=gnu++17 #-fno-exceptions
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=${DEVKITPRO}/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)

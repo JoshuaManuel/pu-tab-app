@@ -1,0 +1,3 @@
+namespace debug {
+    void test();
+}
