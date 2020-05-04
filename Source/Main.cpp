@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "util/debug.hpp"
+#include "cfg/cfg.hpp"
 
 // If you would like to initialize and finalize stuff before or after Plutonium, you can use libnx's userAppInit/userAppExit
 
@@ -11,6 +12,9 @@ extern "C" void userAppInit()
     romfsInit(); // initialize romfs so we can use it!
     socketInitializeDefault(); // initialize sockets for libcurl
     nxlinkStdio(); // reroute print statements to nxlink
+
+    cfg::loadStrings("en");
+
 }
 
 extern "C" void userAppExit()

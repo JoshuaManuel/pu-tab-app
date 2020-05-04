@@ -9,7 +9,10 @@ using json = nlohmann::json;
 namespace debug {
     void test() {
         cfg::loadStrings("en");
-        std::cout << cfg::str(1);
+        std::cout << cfg::str(0) << std::endl;
+        std::cout << cfg::str(1) << std::endl;
+        std::cout << cfg::str(2) << std::endl;
+        std::cout << cfg::str(3) << std::endl;
         /*
         printf("printing to nxlink\n");
         //test json

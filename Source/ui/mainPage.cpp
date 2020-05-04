@@ -2,6 +2,7 @@
 #include "ui/mainPage.hpp"
 #include "ui/MainApplication.hpp"
 #include "ui/imagePage.hpp"
+#include "cfg/cfg.hpp"
 
 #define COLOR(hex) pu::ui::Color::FromHex(hex)
 
@@ -18,15 +19,15 @@ namespace ui { // All below code is in this namespace
         this->optionMenu->SetOnFocusColor(COLOR("#00000033"));
         this->optionMenu->SetScrollbarColor(COLOR("#170909FF"));
 
-        this->firstItem = MenuItem::New("First Item: Image");
+        this->firstItem = MenuItem::New(cfg::str(2));
         this->firstItem->SetColor(COLOR("#FFFFFFFF"));
         this->firstItem->SetIcon("romfs:/icons/light/information-variant.png");
 
-        this->secondItem = MenuItem::New("Second item");
+        this->secondItem = MenuItem::New(cfg::str(3));
         this->secondItem->SetColor(COLOR("#FFFFFFFF"));
         this->secondItem->SetIcon("romfs:/icons/light/web.png"); // use icon
 
-        this->thirdItem = MenuItem::New("Select this to exit"); //not setting this color
+        this->thirdItem = MenuItem::New(cfg::str(4)); //not setting this color
         this->thirdItem->SetColor(COLOR("#FFFFFFFF"));
         this->thirdItem->SetIcon("romfs:/icons/light/update.png");
 

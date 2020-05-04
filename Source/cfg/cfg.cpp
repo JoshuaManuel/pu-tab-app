@@ -13,7 +13,10 @@ namespace cfg {
         strings = json::parse(s);
     }
 
-    std::string str(int num) {
-        return strings[num].get<std::string>();
+    std::string str(int num) { //use actual line number of language file (this function subtracts 2 from the given number)
+        if (num-2 >= strings.size()) {
+            return "???";
+        }
+        return strings[num-2].get<std::string>();
     }
 }
