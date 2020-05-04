@@ -1,5 +1,8 @@
 #include "ui/MainApplication.hpp"
 #include <switch.h>
+#include <iostream>
+#include "util/json.hpp"
+#include <string>
 
 // If you would like to initialize and finalize stuff before or after Plutonium, you can use libnx's userAppInit/userAppExit
 
@@ -14,10 +17,21 @@ extern "C" void userAppExit()
     socketExit();
 }
 
+using json = nlohmann::json;
+
 // Main entrypoint
 int main()
 {
     printf("printing to nxlink. Bug: Output from mainPage shows up after exiting nxlink\n");
+
+    //test json
+    json j = "[\"student\", \"loans\"]"_json;
+
+    auto cpp_string = j[1].get<std::string>();
+
+    std::cout << cpp_string;
+
+
     // First create our renderer, where one can customize SDL or other stuff's initialization.
     auto renderer = pu::ui::render::Renderer::New(pu::ui::render::RendererInitOptions(SDL_INIT_EVERYTHING, pu::ui::render::RendererHardwareFlags).WithIMG(pu::ui::render::IMGAllFlags).WithMixer(pu::ui::render::MixerAllFlags).WithTTF());
 
